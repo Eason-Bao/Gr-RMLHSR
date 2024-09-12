@@ -4,3 +4,6 @@
 > 
 ## Network
 ![](https://github.com/Eason-Bao/Gr-RMLHSR/blob/main/Network.png)
+
+## Usage
+Run demo.py to train and evaluate the network.
