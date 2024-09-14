@@ -8,5 +8,5 @@
 ![](https://github.com/Eason-Bao/Gr-RMLHSR/blob/main/Network.png)
 
 ## Usage
-The [AFEW](https://data.vision.ee.ethz.ch/zzhiwu/ManifoldNetData/SPDData/AFEW_SPD_data.zip) dataset is publicly available.
-Run demo.py to train and evaluate the network.
+• The [AFEW](https://data.vision.ee.ethz.ch/zzhiwu/ManifoldNetData/SPDData/AFEW_SPD_data.zip) dataset is publicly available.<br />
+• Run demo.py to train and evaluate the network.
