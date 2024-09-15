@@ -9,6 +9,6 @@
 
 ## Usage
 • The [AFEW](https://data.vision.ee.ethz.ch/zzhiwu/ManifoldNetData/SPDData/AFEW_SPD_data.zip) dataset is publicly available.<br />
-• If you want to train and evaluate the original Grassmann network, please run demo.py.
-• If you want to train and evaluate the Grassmann network with the PM and PAM metric learning terms, please run demo_PM.py and demo_PAM.py, respectively.
+• If you want to train and evaluate the original Grassmann network, please run demo.py.<br />
+• If you want to train and evaluate the Grassmann network with the PM and PAM metric learning terms, please run demo_PM.py and demo_PAM.py, respectively.<br />
 • If you want to train and evaluate the Grassmann network with a hard sample reward strategy, please run demo_PAM_HSR.py.
