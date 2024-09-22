@@ -36,10 +36,10 @@ class GrNet(nn.Module):
 
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 data_dir = ''
-transformed_dataset_featurebank = CustomDataset(data_dir, split='train')
+transformed_dataset_featurebank = YTCDataset(data_dir, split='train')
 dataloader_featurebank = DataLoader(transformed_dataset_featurebank, batch_size=32,
                     shuffle=False, num_workers=16)
-transformed_dataset_val = CustomDataset(data_dir, split='test')
+transformed_dataset_val = YTCDataset(data_dir, split='test')
 dataloader_val = DataLoader(transformed_dataset_val, batch_size=32,
                     shuffle=False, num_workers=16)
 
