@@ -2,7 +2,7 @@ import os
 import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from tqdm import tqdm
-from dataset_YTC import CustomDataset
+from dataset_YTC import YTCDataset
 from GrasNet import *
 
 
