@@ -18,7 +18,7 @@ class GrNet(nn.Module):
         self.FR2 = FRMap(out_datadim3, out_datadim2)
         self.Orth = Orthmap(self.p)
         self.Pool = MixedPoolLayer()
-        self.fc = nn.Linear(10000, 7)
+        self.fc = nn.Linear(10000, 47)
 
     def forward(self, x):
         x = x.to(torch.float32)
