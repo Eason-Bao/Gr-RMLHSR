@@ -49,7 +49,7 @@ if use_cuda:
     model = model.cuda()
 num_classes = 7
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 def principal_angle_distance(x1, x2):
     # Perform SVD on the product of transpose of x1 and x2
