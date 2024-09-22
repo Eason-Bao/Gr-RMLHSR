@@ -4,9 +4,9 @@ from scipy.io import loadmat
 from torch.utils.data import Dataset
 
 
-class CustomDataset(Dataset):
+class YTCDataset(Dataset):
     def __init__(self, data_dir, split='train', shuffle=True, augmentation=False):
-        super(CustomDataset, self).__init__()
+        super(YTCDataset, self).__init__()
 
         self.data_dir = data_dir
         self.split = split
