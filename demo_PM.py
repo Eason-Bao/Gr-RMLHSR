@@ -33,7 +33,7 @@ class GrNet(nn.Module):
     def __init__(self):
         super().__init__()
         self.ManiBlock = ManiBlock()
-        self.fc = nn.Linear(10000, 7)
+        self.fc = nn.Linear(10000, 47)
 
     def forward(self, x):
         x = x.to(torch.float32)
