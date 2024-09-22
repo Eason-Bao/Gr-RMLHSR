@@ -50,7 +50,7 @@ model = GrNet()
 if use_cuda:
     model = model.cuda()
 criterion = nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.006)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.0001)
 
 
 def principal_angle_distance(x1, x2):
