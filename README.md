@@ -8,7 +8,6 @@
 ![](https://github.com/Eason-Bao/Gr-RMLHSR/blob/main/Network.png)
 
 ## Usage
-If you want to train and evaluate the original Grassmann network, please run demo.py.<br />
 If you want to train and evaluate the Grassmann network with PM metric learning term, run demo_PM.py.<br />
 If you want to train and evaluate the Grassmann network with PAM metric learning term, run demo_PAM.py.<br />
-If you want to train and evaluate the Grassmann network with PAM metric learning term and hard sample reward strategy, run demo_PAM_HSR.py.<br />
+
