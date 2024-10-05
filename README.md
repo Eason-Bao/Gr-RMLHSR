@@ -1,4 +1,4 @@
-# Gr-RMLHSR: Learning a Discriminative Grassmannian Neural Network for Visual Classification
+# Gras-RML
 ## Contribution
 >
 • A Riemannian metric learning regularization module for improving the model capacity is proposed.<br />
