@@ -6,7 +6,7 @@ from dataset_YTC import CustomDataset
 from GrasNet import *
 
 
-class ManiBlock(nn.Module):
+class GrNet(nn.Module):
     def __init__(self, in_datadim=400, out_datadim1=300, out_datadim2=100, out_datadim3=150, embeddim=10):
         super().__init__()
         self.p = embeddim
@@ -15,31 +15,22 @@ class ManiBlock(nn.Module):
         self.FR1 = FRMap(in_datadim, out_datadim1)
         self.FR2 = FRMap(out_datadim3, out_datadim2)
         self.Orth = Orthmap(self.p)
-        self.Pool = ProjPoolLayer()
+        self.Pool = MixedPoolLayer()
+        self.fc = nn.Linear(10000, 47)
 
     def forward(self, x):
         x = x.to(torch.float32)
+        print(x.shape)
         x = self.Orth(x)
         x = self.FR1(x) # 400-300
         x = self.QR(x)
-        x = self.ProjMap(x)# 300-150
-        x = self.Pool(x)
+        x = self.ProjMap(x)
+        x = self.Pool(x)# 300-150
         x = self.Orth(x)
         x = self.FR2(x) # 150-100
-        x = self.QR(x) # 100 * 100
-        return x
-
-class GrNet(nn.Module):
-    def __init__(self):
-        super().__init__()
-        self.ManiBlock = ManiBlock()
-        self.fc = nn.Linear(10000, 7)
-
-    def forward(self, x):
-        x = x.to(torch.float32)
-        x = self.ManiBlock(x)
-        x = self.ManiBlock.ProjMap(x)
         m = x
+        x = self.QR(x) # 100 * 100
+        x = self.ProjMap(x)
         x = x.reshape(x.shape[0], -1)
         x = self.fc(x)
         return x, m
